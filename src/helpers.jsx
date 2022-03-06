@@ -36,7 +36,7 @@ export const pokemonTypesExtractor = (pokemon) => {
   return pokemon.types.map((e) => e.type.name);
 };
 
-export const weaknessCalc = (typesArr) => {
+export const defenseCalculator = (typesArr) => {
   if (typesArr.length === 1) {
     return rawData[typesArr[0]];
   } else {

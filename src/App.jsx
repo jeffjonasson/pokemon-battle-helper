@@ -6,7 +6,7 @@ import {
   capitalizeFirstChar,
   pokemonNameFormatter,
   pokemonTypesExtractor,
-  weaknessCalc,
+  defenseCalculator,
 } from "./helpers";
 import { DefenseStats } from "./DefenseStats";
 
@@ -77,7 +77,7 @@ const App = () => {
             </div>
             <p>
               <DefenseStats
-                defenseStats={weaknessCalc(pokemonTypesExtractor(pokemon))}
+                defenseStats={defenseCalculator(pokemonTypesExtractor(pokemon))}
               />
             </p>
           </div>

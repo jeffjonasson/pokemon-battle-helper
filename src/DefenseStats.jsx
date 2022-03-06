@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export const DefenseStats = ({ defenseStats }) => {
   const uniqueMultipliers = [...new Set(Object.values(defenseStats))].sort(
