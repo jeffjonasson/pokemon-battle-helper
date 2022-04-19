@@ -22,6 +22,7 @@ const App = () => {
     P.getPokemonsList(interval).then((response) => {
       setPokemonList(response.results);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchPokemonData = (url) => {
@@ -68,21 +69,33 @@ const App = () => {
         />
         {pokemon && (
           <div>
-            <h2>{pokemonNameFormatter(pokemon.name)}</h2>
+            <div className="PokemonName">
+              <span>{pokemonNameFormatter(pokemon.name)}</span>
+            </div>
             <img alt="Pokemon" src={pokemon.sprites.front_default} />
-            <div>
+            <div className="PokemonType">
               {pokemonTypesExtractor(pokemon).map((name) => (
                 <span key={name}> {capitalizeFirstChar(name)}</span>
               ))}
             </div>
-            <p>
+            <div>
               <DefenseStats
                 defenseStats={defenseCalculator(pokemonTypesExtractor(pokemon))}
               />
-            </p>
+            </div>
           </div>
         )}
       </div>
+      <footer className="App-footer">
+        <div>Created by Jeff Jonasson. © 2020</div>
+
+        <div>
+          Pokémon © 2002–2022 Pokémon. © 1995–2022 Nintendo/Creatures Inc./GAME
+          FREAK inc. ™, ® and Pokémon character names are trademarks of
+          Nintendo. No copyright or trademark infringement is intended in using
+          Pokémon content on this page.
+        </div>
+      </footer>
     </div>
   );
 };

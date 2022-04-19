@@ -1,4 +1,6 @@
 import React from "react";
+import "./App.css";
+import { capitalizeFirstChar } from "./helpers";
 
 export const DefenseStats = ({ defenseStats }) => {
   const uniqueMultipliers = [...new Set(Object.values(defenseStats))].sort(
@@ -13,17 +15,29 @@ export const DefenseStats = ({ defenseStats }) => {
     uniqueMultipliers.splice(index, 1); // 2nd parameter means remove one item only
   }
 
-  function getKeysByValue(object, value) {
+  const getKeysByValue = (object, value) => {
     return Object.keys(object).filter((key) => object[key] === value);
-  }
+  };
+
+  const typeArrayFormatter = (typesArr) => {
+    let typesString = "";
+    typesArr.forEach((type) => {
+      typesString = `${typesString}${capitalizeFirstChar(type)}, `;
+    });
+    return typesString.substring(0, typesString.length - 2);
+  };
 
   return (
     <>
       {uniqueMultipliers.map((multiplier) => (
-        <p>
-          <div>Damaged {multiplier}x by:</div>
-          <div>{getKeysByValue(defenseStats, multiplier).toString()}</div>
-        </p>
+        <div key={multiplier} className="DefenseMultiplier">
+          <div className="DefenseMultiplier-multi">
+            Damaged {multiplier}x by:
+          </div>
+          <div className="DefenseMultiplier-types">
+            {typeArrayFormatter(getKeysByValue(defenseStats, multiplier))}
+          </div>
+        </div>
       ))}
     </>
   );

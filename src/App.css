@@ -12,3 +12,34 @@
 .Content {
   width: 80%;
 }
+
+.App-footer {
+  position: fixed;
+  bottom: 0;
+  font-size: calc(2vmin);
+  margin: 0 2rem 1rem 2rem;
+}
+
+.PokemonName {
+  font-size: calc(20px + 2vmin);
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.PokemonType {
+  font-size: calc(15px + 2vmin);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.DefenseMultiplier {
+  margin-bottom: 1rem;
+}
+
+.DefenseMultiplier-multi {
+  font-weight: bold;
+}
+
+.DefenseMultiplier-types {
+  font-style: italic;
+}
