@@ -17,7 +17,7 @@
   position: fixed;
   bottom: 0;
   font-size: calc(2vmin);
-  margin: 0 2rem 1rem 2rem;
+  margin: 1rem;
 }
 
 .PokemonName {
