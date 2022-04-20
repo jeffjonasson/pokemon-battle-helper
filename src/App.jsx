@@ -15,7 +15,7 @@ const App = () => {
   const [pokemon, setPokemon] = useState(null);
   const P = new Pokedex();
   const interval = {
-    limit: 300,
+    limit: 898,
   };
 
   useEffect(() => {
