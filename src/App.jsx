@@ -87,7 +87,7 @@ const App = () => {
         )}
       </div>
       <footer className="App-footer">
-        <div>Created by Jeff Jonasson. © 2020</div>
+        <div>Created by Jeff Jonasson. © 2022</div>
 
         <div>
           Pokémon © 2002–2022 Pokémon. © 1995–2022 Nintendo/Creatures Inc./GAME
