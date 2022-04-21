@@ -1,6 +1,6 @@
 # Pokemon Battle Helper, created by Jeff Jonasson
 
-This project was created out of neccessity to show one thing only. A pokémons type weaknesses.
+This project was created out of necessity to show one thing and one thing only. A Pokémons type weaknesses.
 
 ## Available Scripts
 
