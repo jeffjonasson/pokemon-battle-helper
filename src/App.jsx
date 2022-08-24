@@ -35,6 +35,7 @@ const App = () => {
   const onChange = (event, newValue) => {
     if (newValue) {
       fetchPokemonData(newValue.url);
+      event.target.blur();
     } else setPokemon(null);
   };
 
