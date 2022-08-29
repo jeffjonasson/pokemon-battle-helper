@@ -3,10 +3,10 @@ import { Autocomplete, Paper, TextField } from "@mui/material";
 import Pokedex from "pokedex-promise-v2";
 import "./App.css";
 import {
-  capitalizeFirstChar,
   pokemonNameFormatter,
   pokemonTypesExtractor,
   defenseCalculator,
+  pokemonTypeFormatter,
 } from "./helpers";
 import { DefenseStats } from "./DefenseStats";
 
@@ -83,9 +83,9 @@ const App = () => {
             </div>
             <img alt="Pokemon" src={pokemon.sprites.front_default} />
             <div className="PokemonType">
-              {pokemonTypesExtractor(pokemon).map((name) => (
-                <span key={name}> {capitalizeFirstChar(name)}</span>
-              ))}
+              <span>
+                {pokemonTypeFormatter(pokemonTypesExtractor(pokemon))}
+              </span>
             </div>
             <div>
               <DefenseStats

@@ -36,6 +36,14 @@ export const pokemonTypesExtractor = (pokemon) => {
   return pokemon.types.map((e) => e.type.name);
 };
 
+export const pokemonTypeFormatter = (types) => {
+  let typesString = "";
+  types.forEach((type) => {
+    typesString = `${typesString}${capitalizeFirstChar(type)} / `;
+  });
+  return typesString.substring(0, typesString.length - 3);
+};
+
 export const defenseCalculator = (typesArr) => {
   if (typesArr.length === 1) {
     return rawData[typesArr[0]];
