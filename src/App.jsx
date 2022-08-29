@@ -45,29 +45,37 @@ const App = () => {
         <h2>Pokémon Battle Helper</h2>
       </header>
       <div className="Content">
-        <Autocomplete
-          freeSolo
-          onChange={onChange}
-          disablePortal
-          options={pokemonList.map((e) => ({
-            label: pokemonNameFormatter(e.name),
-            url: e.url,
-          }))}
-          renderInput={(params) => (
-            <>
-              <Paper
-                component="form"
-                sx={{
-                  p: "6px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <TextField fullWidth {...params} label="Search for a pokémon" />
-              </Paper>
-            </>
-          )}
-        />
+        <div className="InputFieldWrapper">
+          <div className="InputField">
+            <Autocomplete
+              freeSolo
+              onChange={onChange}
+              disablePortal
+              options={pokemonList.map((e) => ({
+                label: pokemonNameFormatter(e.name),
+                url: e.url,
+              }))}
+              renderInput={(params) => (
+                <>
+                  <Paper
+                    component="form"
+                    sx={{
+                      p: "6px",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <TextField
+                      fullWidth
+                      {...params}
+                      label="Search for a pokémon"
+                    />
+                  </Paper>
+                </>
+              )}
+            />
+          </div>
+        </div>
         {pokemon && (
           <div>
             <div className="PokemonName">

@@ -14,6 +14,17 @@
   width: 80%;
 }
 
+.InputFieldWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.InputField {
+  width: 100%;
+  max-width: 1000px;
+}
+
 .App-footer {
   position: fixed;
   bottom: 0;
@@ -43,6 +54,30 @@
   font-weight: bold;
 }
 
+.DefenseMultiplier-4 {
+  color: red;
+}
+
+.DefenseMultiplier-2 {
+  color: orangered;
+}
+
+.DefenseMultiplier-05 {
+  color: green;
+}
+
+.DefenseMultiplier-025 {
+  color: greenyellow;
+}
+
+.DefenseMultiplier-0 {
+  color: gold;
+}
+
 .DefenseMultiplier-types {
   font-style: italic;
+}
+
+.App-footer {
+  font-size: small;
 }

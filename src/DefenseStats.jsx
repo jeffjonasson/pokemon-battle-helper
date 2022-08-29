@@ -32,7 +32,15 @@ export const DefenseStats = ({ defenseStats }) => {
       {uniqueMultipliers.map((multiplier) => (
         <div key={multiplier} className="DefenseMultiplier">
           <div className="DefenseMultiplier-multi">
-            Damaged {multiplier}x by:
+            Damaged{" "}
+            <span
+              className={`DefenseMultiplier-${multiplier
+                .toString()
+                .replaceAll(".", "")}`}
+            >
+              {multiplier}x{" "}
+            </span>
+            by:
           </div>
           <div className="DefenseMultiplier-types">
             {typeArrayFormatter(getKeysByValue(defenseStats, multiplier))}
