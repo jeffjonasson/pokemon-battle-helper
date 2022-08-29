@@ -1,9 +1,11 @@
 .App {
-  text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
+  justify-content: space-between;
+  background-color: #282c34;
+
+  text-align: center;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -78,6 +80,16 @@
   font-style: italic;
 }
 
-.App-footer {
-  font-size: small;
+.Footer {
+  margin-top: auto;
+  font-size: calc(2vmin);
+  margin: 1.5rem;
+}
+
+@media screen and (min-width: 1600px) {
+  .Footer {
+    margin-top: auto;
+    font-size: small;
+    margin: 1.5rem;
+  }
 }
