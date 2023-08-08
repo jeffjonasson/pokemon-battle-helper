@@ -47,7 +47,7 @@
 .PokemonName {
   font-size: calc(20px + 2vmin);
   font-weight: bold;
-  margin-top: 2rem;
+  margin-top: 2.6rem;
 }
 
 .PokemonType {
@@ -59,7 +59,7 @@
 .PrevAndNextPokemon {
   font-size: calc(5px + 2vmin);
   position: relative;
-  padding-top: 0.5rem;
+  padding-top: 1px;
 }
 
 .PreviousPokemon {
