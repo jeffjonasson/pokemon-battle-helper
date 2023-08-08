@@ -25,6 +25,10 @@ const App = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     P.getPokemonsList(interval).then((response) => {
       setPokemonList(response.results);
     });
@@ -47,8 +51,6 @@ const App = () => {
       event.target.blur();
     } else setPokemon(initalState);
   };
-
-  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
   return (
     <div className='App'>
