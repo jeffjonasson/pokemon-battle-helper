@@ -3,7 +3,7 @@
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #282c34;
+  background-color: #303132;
 
   text-align: center;
   align-items: center;
@@ -14,6 +14,14 @@
 
 .Content {
   width: 80%;
+}
+
+.App-header {
+  font-size: calc(12px + 2vmin);
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffa600;
 }
 
 .InputFieldWrapper {
@@ -46,6 +54,34 @@
   font-size: calc(15px + 2vmin);
   font-weight: bold;
   margin-bottom: 2rem;
+}
+
+.PrevAndNextPokemon {
+  font-size: calc(5px + 2vmin);
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.PreviousPokemon {
+  position: absolute;
+  left: 0;
+}
+.NextPokemon {
+  position: absolute;
+  right: 0;
+}
+
+.SelectButton {
+  padding: 0.5rem;
+}
+
+.LeftArrow {
+  display: flex;
+}
+
+.RightArrow {
+  transform: rotate(180deg);
+  display: flex;
 }
 
 .DefenseMultiplier {
@@ -92,4 +128,12 @@
     font-size: small;
     margin: 1.5rem;
   }
+}
+
+button,
+button:focus button:active {
+  color: white;
+  outline: none;
+  background: transparent;
+  border: none;
 }
