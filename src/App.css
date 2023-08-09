@@ -109,7 +109,8 @@
 }
 
 .DefenseMultiplier-0 {
-  color: gold;
+  color: #000;
+  text-shadow: 0 0 1.5px #fff, 0 0 1.5px #fff, 0 0 1.5px #fff, 0 0 1.5px #fff;
 }
 
 .DefenseMultiplier-types {
