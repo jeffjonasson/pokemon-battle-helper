@@ -20,8 +20,8 @@
 .Header {
   font-size: calc(12px + 2vmin);
   font-weight: bold;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
   color: #fff;
   display: flex;
   justify-content: center;

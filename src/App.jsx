@@ -49,7 +49,6 @@ const App = () => {
 
   const onChange = (event, newValue) => {
     if (newValue) {
-      event.target.blur();
       fetchPokemonData(newValue.url);
     } else setPokemon(initalState);
   };
@@ -62,6 +61,7 @@ const App = () => {
           <div className='InputField'>
             <Autocomplete
               freeSolo
+              blurOnSelect
               onChange={onChange}
               disablePortal
               options={pokemonList.map((e) => ({
