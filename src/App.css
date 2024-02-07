@@ -17,12 +17,20 @@
   max-width: 1000px;
 }
 
-.App-header {
+.Header {
   font-size: calc(12px + 2vmin);
   font-weight: bold;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  color: #ffa600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 1.4rem;
+    padding-right: 0.4rem;
+    transform: rotate(-8deg);
+  }
 }
 
 .InputFieldWrapper {

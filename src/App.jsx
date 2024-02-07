@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Autocomplete, Paper, TextField } from '@mui/material';
 import Pokedex from 'pokedex-promise-v2';
 import './App.css';
+import Footer from './Components/Footer';
 import {
   pokemonNameFormatter,
   pokemonTypesExtractor,
@@ -10,6 +11,7 @@ import {
 } from './helpers';
 import { DefenseStats } from './DefenseStats';
 import { ReactComponent as LeftArrow } from './assets/left-arrow.svg';
+import Header from './Components/Header';
 
 const App = () => {
   const initalState = {
@@ -55,9 +57,7 @@ const App = () => {
   return (
     <div className='App'>
       <div className='Content'>
-        <header className='App-header'>
-          <span>Pokémon Battle Helper</span>
-        </header>
+        <Header />
         <div className='InputFieldWrapper'>
           <div className='InputField'>
             <Autocomplete
@@ -81,7 +81,7 @@ const App = () => {
                     <TextField
                       fullWidth
                       {...params}
-                      label='Search for a pokémon'
+                      label='Search for a Pokémon'
                     />
                   </Paper>
                 </>
@@ -138,15 +138,7 @@ const App = () => {
           </div>
         )}
       </div>
-      <div className='Footer'>
-        <div>Created by Jeff Jonasson. © 2022</div>
-        <div>
-          Pokémon © 2002–2022 Pokémon. © 1995–2022 Nintendo/Creatures Inc./GAME
-          FREAK inc. ™, ® and Pokémon character names are trademarks of
-          Nintendo. No copyright or trademark infringement is intended in using
-          Pokémon content on this page.
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
