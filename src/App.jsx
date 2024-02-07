@@ -49,8 +49,8 @@ const App = () => {
 
   const onChange = (event, newValue) => {
     if (newValue) {
-      fetchPokemonData(newValue.url);
       event.target.blur();
+      fetchPokemonData(newValue.url);
     } else setPokemon(initalState);
   };
 
