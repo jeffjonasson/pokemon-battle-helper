@@ -34,7 +34,7 @@ body {
 
 .Header {
   font-family: 'Pokemon';
-  font-size: calc(18px + 2vmin);
+  font-size: calc(15px + 2vmin);
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   color: #fff;
