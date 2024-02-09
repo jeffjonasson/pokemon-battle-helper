@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Pokemon'; /*Can be any text*/
+  src: local('Ketchum-WeeV'), url('./fonts/Ketchum-WeeV.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,8 +33,8 @@ body {
 }
 
 .Header {
-  font-size: calc(12px + 2vmin);
-  font-weight: bold;
+  font-family: 'Pokemon';
+  font-size: calc(18px + 2vmin);
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   color: #fff;
