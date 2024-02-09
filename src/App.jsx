@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Autocomplete, Paper, TextField } from '@mui/material';
+import { Autocomplete, TextField } from '@mui/material';
 import Pokedex from 'pokedex-promise-v2';
 import './App.css';
 import Footer from './Components/Footer';
@@ -68,23 +68,13 @@ const App = () => {
                 label: pokemonNameFormatter(e.name),
                 url: e.url,
               }))}
+              sx={{
+                backgroundColor: '#FFF',
+                padding: '8px',
+                borderRadius: '4px',
+              }}
               renderInput={(params) => (
-                <>
-                  <Paper
-                    component='form'
-                    sx={{
-                      p: '6px',
-                      display: 'flex',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <TextField
-                      fullWidth
-                      {...params}
-                      label='Search for a Pokémon'
-                    />
-                  </Paper>
-                </>
+                <TextField fullWidth {...params} label='Search for a Pokémon' />
               )}
             />
           </div>
