@@ -7,6 +7,9 @@ body {
 .App {
   display: flex;
   min-height: 100vh;
+  @media (max-width: 600px) {
+    min-height: -webkit-fill-available;
+  }
   flex-direction: column;
   justify-content: space-between;
   background-color: #303132;
@@ -33,11 +36,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    height: 1.8rem;
-    padding-right: 0.4rem;
-    transform: rotate(-16deg);
-  }
+}
+
+.Header-img {
+  width: 22px;
+  height: auto;
+  padding-right: 0.4rem;
+  transform: rotate(-16deg);
 }
 
 .InputFieldWrapper {
