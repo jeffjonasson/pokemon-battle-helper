@@ -1,0 +1,33 @@
+.DefenseMultiplier {
+  margin-bottom: 1rem;
+}
+
+.DefenseMultiplier-multi {
+  font-weight: bold;
+}
+
+.DefenseMultiplier-4 {
+  color: red;
+}
+
+.DefenseMultiplier-2 {
+  color: orangered;
+}
+
+.DefenseMultiplier-05 {
+  color: green;
+}
+
+.DefenseMultiplier-025 {
+  color: greenyellow;
+}
+
+.DefenseMultiplier-0 {
+  color: #000;
+  text-shadow: 0 0 1.5px #fff, 0 0 1.5px #fff, 0 0 1.5px #fff, 0 0 1.5px #fff;
+}
+
+.DefenseMultiplier-types {
+  font-family: monospace;
+  font-size: calc(4px + 2vmin);
+}

@@ -1,28 +1,28 @@
-import * as rawData from "./data.json";
+import * as rawData from './data.json';
 
 const types = [
-  "bug",
-  "dark",
-  "dragon",
-  "electric",
-  "fairy",
-  "fighting",
-  "fire",
-  "flying",
-  "ghost",
-  "grass",
-  "ground",
-  "ice",
-  "normal",
-  "poison",
-  "psychic",
-  "rock",
-  "steel",
-  "water",
+  'bug',
+  'dark',
+  'dragon',
+  'electric',
+  'fairy',
+  'fighting',
+  'fire',
+  'flying',
+  'ghost',
+  'grass',
+  'ground',
+  'ice',
+  'normal',
+  'poison',
+  'psychic',
+  'rock',
+  'steel',
+  'water',
 ];
 
 export const pokemonNameFormatter = (name) => {
-  const spacedName = name.split("-").join(" ");
+  const spacedName = name.split('-').join(' ');
   return spacedName.replace(/(?:^|\s)\S/g, function (a) {
     return a.toUpperCase();
   });
@@ -37,7 +37,7 @@ export const pokemonTypesExtractor = (pokemon) => {
 };
 
 export const pokemonTypeFormatter = (types) => {
-  let typesString = "";
+  let typesString = '';
   types.forEach((type) => {
     typesString = `${typesString}${capitalizeFirstChar(type)} / `;
   });
@@ -57,4 +57,8 @@ export const defenseCalculator = (typesArr) => {
     });
     return multipledTypesObj;
   }
+};
+
+export const pokemonIdFormatter = (id) => {
+  return id.toString().padStart(4, '0');
 };

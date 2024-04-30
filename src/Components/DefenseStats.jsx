@@ -1,6 +1,6 @@
-import React from "react";
-import "./App.css";
-import { capitalizeFirstChar } from "./helpers";
+import React from 'react';
+import './DefenseStats.css';
+import { capitalizeFirstChar } from '../helpers';
 
 export const DefenseStats = ({ defenseStats }) => {
   const uniqueMultipliers = [...new Set(Object.values(defenseStats))].sort(
@@ -20,7 +20,7 @@ export const DefenseStats = ({ defenseStats }) => {
   };
 
   const typeArrayFormatter = (typesArr) => {
-    let typesString = "";
+    let typesString = '';
     typesArr.forEach((type) => {
       typesString = `${typesString}${capitalizeFirstChar(type)}, `;
     });
@@ -30,19 +30,19 @@ export const DefenseStats = ({ defenseStats }) => {
   return (
     <>
       {uniqueMultipliers.map((multiplier) => (
-        <div key={multiplier} className="DefenseMultiplier">
-          <div className="DefenseMultiplier-multi">
-            Damaged{" "}
+        <div key={multiplier} className='DefenseMultiplier'>
+          <div className='DefenseMultiplier-multi'>
+            Damaged{' '}
             <span
               className={`DefenseMultiplier-${multiplier
                 .toString()
-                .replaceAll(".", "")}`}
+                .replaceAll('.', '')}`}
             >
-              {multiplier}x{" "}
+              {multiplier}x{' '}
             </span>
             by:
           </div>
-          <div className="DefenseMultiplier-types">
+          <div className='DefenseMultiplier-types'>
             {typeArrayFormatter(getKeysByValue(defenseStats, multiplier))}
           </div>
         </div>

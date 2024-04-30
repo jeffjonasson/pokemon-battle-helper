@@ -8,8 +8,9 @@ import {
   pokemonTypesExtractor,
   defenseCalculator,
   pokemonTypeFormatter,
+  pokemonIdFormatter,
 } from './helpers';
-import { DefenseStats } from './DefenseStats';
+import { DefenseStats } from './Components/DefenseStats';
 import { ReactComponent as LeftArrow } from './assets/left-arrow.svg';
 import Header from './Components/Header';
 
@@ -111,6 +112,9 @@ const App = () => {
             </div>
             <div className='PokemonName'>
               <span>{pokemonNameFormatter(pokemon.current.name)}</span>
+            </div>
+            <div className='PokemonId'>
+              <span>#{pokemonIdFormatter(pokemon.current.id)}</span>
             </div>
             <img alt='Pokemon' src={pokemon.current.sprites.front_default} />
             <div className='PokemonType'>
