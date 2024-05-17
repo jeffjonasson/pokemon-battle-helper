@@ -1,0 +1,46 @@
+.PokemonName {
+  font-size: calc(20px + 2vmin);
+  font-weight: bold;
+  margin-top: 2.6rem;
+}
+
+.PokemonType {
+  font-size: calc(15px + 2vmin);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.PokemonId {
+  font-size: calc(5px + 2vmin);
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-family: monospace;
+}
+
+.PrevAndNextPokemon {
+  font-size: calc(5px + 2vmin);
+  position: relative;
+  padding-top: 1px;
+}
+
+.PreviousPokemon {
+  position: absolute;
+  left: 0;
+}
+.NextPokemon {
+  position: absolute;
+  right: 0;
+}
+
+.SelectButton {
+  padding: 0.5rem;
+}
+
+.LeftArrow {
+  display: flex;
+}
+
+.RightArrow {
+  transform: rotate(180deg);
+  display: flex;
+}

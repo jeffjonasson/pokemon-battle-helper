@@ -50,17 +50,6 @@ body {
   transform: rotate(-16deg);
 }
 
-.InputFieldWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 0.6rem;
-}
-
-.InputField {
-  width: 100%;
-}
-
 .App-footer {
   position: fixed;
   bottom: 0;

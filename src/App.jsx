@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Autocomplete, TextField } from '@mui/material';
 import Pokedex from 'pokedex-promise-v2';
 import './App.css';
 import Footer from './Components/Footer';
-import {
-  pokemonNameFormatter,
-  pokemonTypesExtractor,
-  defenseCalculator,
-  pokemonTypeFormatter,
-  pokemonIdFormatter,
-} from './helpers';
-import { DefenseStats } from './Components/DefenseStats';
-import { ReactComponent as LeftArrow } from './assets/left-arrow.svg';
 import Header from './Components/Header';
+import InputField from './Components/InputField';
+import PokemonDisplay from './Components/PokemonDisplay';
 
 const App = () => {
   const initalState = {
@@ -58,79 +50,8 @@ const App = () => {
     <div className='App'>
       <div className='Content'>
         <Header />
-        <div className='InputFieldWrapper'>
-          <div className='InputField'>
-            <Autocomplete
-              freeSolo
-              blurOnSelect
-              onChange={onChange}
-              disablePortal
-              options={pokemonList.map((e) => ({
-                label: pokemonNameFormatter(e.name),
-                url: e.url,
-              }))}
-              sx={{
-                backgroundColor: '#FFF',
-                padding: '8px',
-                borderRadius: '4px',
-              }}
-              renderInput={(params) => (
-                <TextField fullWidth {...params} label='Search for a Pokémon' />
-              )}
-            />
-          </div>
-        </div>
-        {pokemon.current && (
-          <div>
-            <div className='PrevAndNextPokemon'>
-              {pokemon.previous && (
-                <div className='PreviousPokemon'>
-                  <button
-                    className='SelectButton'
-                    onClick={() => fetchPokemonData(pokemon.previous.url)}
-                  >
-                    <span>{pokemonNameFormatter(pokemon.previous.name)}</span>
-                    <div className='LeftArrow'>
-                      <LeftArrow />
-                    </div>
-                  </button>
-                </div>
-              )}
-              {pokemon.next && (
-                <div className='NextPokemon'>
-                  <button
-                    className='SelectButton'
-                    onClick={() => fetchPokemonData(pokemon.next.url)}
-                  >
-                    <span>{pokemonNameFormatter(pokemon.next.name)}</span>
-                    <div className='RightArrow'>
-                      <LeftArrow />
-                    </div>
-                  </button>
-                </div>
-              )}
-            </div>
-            <div className='PokemonName'>
-              <span>{pokemonNameFormatter(pokemon.current.name)}</span>
-            </div>
-            <div className='PokemonId'>
-              <span>#{pokemonIdFormatter(pokemon.current.id)}</span>
-            </div>
-            <img alt='Pokemon' src={pokemon.current.sprites.front_default} />
-            <div className='PokemonType'>
-              <span>
-                {pokemonTypeFormatter(pokemonTypesExtractor(pokemon.current))}
-              </span>
-            </div>
-            <div>
-              <DefenseStats
-                defenseStats={defenseCalculator(
-                  pokemonTypesExtractor(pokemon.current)
-                )}
-              />
-            </div>
-          </div>
-        )}
+        <InputField onChange={onChange} pokemonList={pokemonList} />
+        <PokemonDisplay pokemon={pokemon} fetchPokemonData={fetchPokemonData} />
       </div>
       <Footer />
     </div>
